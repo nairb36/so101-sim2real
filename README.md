@@ -16,7 +16,9 @@ A **sim-only-trained** GR00T policy running on the **real SO-101**. The clip sho
 consecutive rollouts — **two successes and one failure** — a small illustration of the
 Sim2Real gap, not a success-rate measurement.
 
-![Real SO-101 rollouts: two successes, one failure (sim-only-trained policy)](so_101_good_bad.gif)
+<p align="center">
+  <img src="so_101_good_bad.gif" width="100%" alt="Real SO-101 rollouts: two successes, one failure (sim-only-trained policy)">
+</p>
 
 ---
 
