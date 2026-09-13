@@ -16,9 +16,18 @@ A **sim-only-trained** GR00T policy running on the **real SO-101**. The clip sho
 consecutive rollouts — **two successes and one failure** — a small illustration of the
 Sim2Real gap, not a success-rate measurement.
 
+<!--
+  For a reliable inline PLAYER on GitHub, drag so_101_rollout_good_bad.mp4 into the
+  GitHub web editor (or a comment box); GitHub returns a https://github.com/user-attachments/assets/...
+  URL. Replace the src below with that URL. The relative path works locally and in
+  many renderers but may fall back to a link on github.com.
+-->
 <p align="center">
-  <img src="so_101_good_bad.gif" width="100%" alt="Real SO-101 rollouts: two successes, one failure (sim-only-trained policy)">
+  <video src="so_101_rollout_good_bad.mp4" width="100%" controls muted loop playsinline autoplay></video>
 </p>
+
+<sub>Real SO-101 rollouts: two successes, one failure (sim-only-trained policy). If the
+player does not appear, see <a href="so_101_rollout_good_bad.mp4">so_101_rollout_good_bad.mp4</a>.</sub>
 
 ---
 
