@@ -19,7 +19,7 @@ Sim2Real gap, not a success-rate measurement.
 https://github.com/user-attachments/assets/55d65970-f24c-48bd-b7e2-405cfaff5fd5
 
 <sub>Real SO-101 rollouts: two successes, one failure (sim-only-trained policy). A copy of the
-clip also lives in the repo at <a href="so_101_rollout_good_bad.mp4">so_101_rollout_good_bad.mp4</a>.</sub>
+clip also lives in the repo at <a href="media/so_101_rollout_good_bad.mp4">media/so_101_rollout_good_bad.mp4</a>.</sub>
 
 ---
 
@@ -133,11 +133,33 @@ real hardware.
 
 ---
 
+## Baseline results
+
+Stage-level baseline over 20 sim + 20 real trials (checkpoint-10000). Real data was collected
+**after** a camera-alignment fix that matched the real camera viewpoint to sim — the initial
+real runs were badly degraded by a camera-orientation mismatch.
+
+| Stage (conditional)              | Sim   | Real  |
+| -------------------------------- | ----: | ----: |
+| Pick                             | 95%   | 75%   |
+| Transport \| successful pick     | 94.7% | 100%  |
+| Placement \| arrival at rack     | 55.6% | 53.3% |
+| End-to-end success               | 50%   | 40%   |
+
+**Takeaways (as measured):** the largest sim→real gap is at **acquisition** (pick 95% → 75%);
+once the vial is securely grasped, downstream behavior is nearly identical to sim. In sim,
+**placement** is the dominant failure stage. The real policy also shows a strong front-right
+spatial prior and a preference for rack slot 1, and rack-occupancy avoidance is unreliable in
+both domains. Small samples — see the full tables, per-trial logs, observations, and
+hypotheses in **[experiments/baseline.md](experiments/baseline.md)**.
+
+---
+
 ## Status & scope
 
-- [ ] Simulation stage-level baseline
-- [ ] Real-robot stage-level baseline (in progress)
-- [ ] Sim vs. real failure-distribution comparison
+- [x] Simulation stage-level baseline (20 trials) — see [experiments/baseline.md](experiments/baseline.md)
+- [x] Real-robot stage-level baseline (20 trials, post camera-alignment fix)
+- [x] Sim vs. real failure-distribution comparison
 - [ ] Full timing decomposition (beyond network RTT)
 - [ ] Sim2Real interventions, evaluated one variable at a time
 
