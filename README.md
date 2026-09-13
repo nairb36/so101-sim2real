@@ -10,6 +10,16 @@ experiments are labeled as planned.
 
 ---
 
+## Rollout preview
+
+A **sim-only-trained** GR00T policy running on the **real SO-101**. The clip shows three
+consecutive rollouts — **two successes and one failure** — a small illustration of the
+Sim2Real gap, not a success-rate measurement.
+
+![Real SO-101 rollouts: two successes, one failure (sim-only-trained policy)](so_101_good_bad.gif)
+
+---
+
 ## The problem
 
 A GR00T-based policy is trained largely in simulation, then deployed on a physical robot.
