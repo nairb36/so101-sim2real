@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# Large raw source media — commit compressed MP4s instead (GitHub rejects >100 MB)
+so_101_rollout_good_bad.gif
+*.gif
